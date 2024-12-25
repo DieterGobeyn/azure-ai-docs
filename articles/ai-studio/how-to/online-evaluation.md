@@ -228,7 +228,7 @@ app_insights_config = ApplicationInsightsConfiguration(
 deployment_name = "gpt-4"
 api_version = "2024-08-01-preview"
 
-# This is your AOAI connection name, which can be found in your AI Foundry project under the 'Models + Endpoints' tab
+# This is your AOAI connection name, which can be found in your Azure AI Foundry project under the 'Models + Endpoints' tab
 default_connection = project_client.connections._get_connection(
     "aoai_connection_name"
 )
@@ -245,7 +245,7 @@ Next, configure the evaluators you wish to use:
 
 ```python
 # RelevanceEvaluator
-# id for each evaluator can be found in your AI Foundry registry - please see documentation for more information
+# id for each evaluator can be found in your Azure AI Foundry registry - please see documentation for more information
 # init_params is the configuration for the model to use to perform the evaluation
 # data_mapping is used to map the output columns of your query to the names required by the evaluator
 relevance_evaluator_config = EvaluatorConfiguration(
@@ -359,6 +359,9 @@ This allows you to add additional custom evaluators that you might have logged o
 You can also share this workbook with your team so they stay informed with the latest!
 
 :::image type="content" source="../media/how-to/online-evaluation/share-azure-workbook.png" alt-text="Screenshot of an Azure Workbook showing the share button and share tab." lightbox="../media/how-to/online-evaluation/share-azure-workbook.png":::
+
+> [!NOTE]
+> When sharing this workbook with your team members, they must have atleast 'Reader' role to the connected Application Insights resource to view the displayed information.
 
 ## Related content
 

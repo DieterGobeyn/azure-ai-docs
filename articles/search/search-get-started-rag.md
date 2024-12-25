@@ -63,7 +63,6 @@ Azure OpenAI is receiving the (query) "Can you recommend a few hotels" from your
 
     1. On Azure AI Search, make sure you have permissions to create, load, and query a search index:
 
-       - **Search Index Data Reader**
        - **Search Index Data Contributor**
        - **Search Service Contributor**
 
@@ -423,7 +422,7 @@ Once you have your tenant ID, run `az login --tenant <YOUR-TENANT-ID>` at a comm
 
 When you're working in your own subscription, it's a good idea at the end of a project to identify whether you still need the resources you created. Resources left running can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
 
-You can find and manage resources in the portal by using the **All resources** or **Resource groups** link in the leftmost pane.
+You can find and manage resources in the Azure portal by using the **All resources** or **Resource groups** link in the leftmost pane.
 
 ## See also
 

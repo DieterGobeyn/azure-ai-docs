@@ -8,19 +8,19 @@ author: HeidiSteen
 ms.author: heidist
 ms.service: azure-ai-search
 ms.topic: tutorial
-ms.date: 10/04/2024
+ms.date: 12/18/2024
 
 ---
 
 # Tutorial: Design an index for RAG in Azure AI Search
 
-An index contains searchable text and vector content, plus configurations. In a RAG pattern that uses a chat model for responses, you want an index that contains chunks of content that can be passed to an LLM at query time. 
+An index contains searchable text and vector content, plus configurations. In a RAG pattern that uses a chat model for responses, you want an index designed around chunks of content that can be passed to an LLM at query time. 
 
 In this tutorial, you:
 
 > [!div class="checklist"]
 > - Learn the characteristics of an index schema built for RAG
-> - Create an index that accommodate vectors and hybrid queries
+> - Create an index that accommodates vector and hybrid queries
 > - Add vector profiles and configurations
 > - Add structured data
 > - Add filtering
@@ -65,10 +65,8 @@ In Azure AI Search, an index that works best for RAG workloads has these qualiti
 
 - Your schema should either be flat (no complex types or structures), or you should [format the complext type output as JSON](search-get-started-rag.md#send-a-complex-rag-query) before sending it to the LLM. This requirement is specific to the RAG pattern in Azure AI Search.
 
-<!-- Although Azure AI Search can't join indexes, you can create indexes that preserve parent-child relationship, and then use sequential queries in your search logic to pull from both (a query on the chunked data index, a lookup on the parent index). This exercise includes templates for parent-child elements in the same index and in separate indexes, where information from the parent index is retrieved using a lookup query. -->
-
-<!-- > [!NOTE]
-> Schema design affects storage and costs. This exercise is focused on schema fundamentals. In the [Minimize storage and costs](tutorial-rag-build-solution-minimize-storage.md) tutorial, you revisit schema design to consider narrow data types, attribution, and vector configurations that offer more efficient. -->
+> [!NOTE]
+> Schema design affects storage and costs. This exercise is focused on schema fundamentals. In the [Minimize storage and costs](tutorial-rag-build-solution-minimize-storage.md) tutorial, you revisit schemas to learn how narrow data types, compression, and storage options significantly reduce the amount of storage used by vectors.
 
 ## Create an index for RAG workloads
 
